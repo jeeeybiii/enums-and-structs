@@ -23,6 +23,7 @@
         public string firstName;
         public string lastName;
         public string interest;
+        public int score;
     }
     internal class Program
     {
@@ -90,19 +91,23 @@
                 student[i].lastName = Console.ReadLine();
                 Console.Write("Enter interest: ");
                 student[i].interest = Console.ReadLine();
+                Console.Write("Enter score: ");
+                student[i].score = int.Parse(Console.ReadLine());
                 Console.WriteLine();
             }
 
             Console.Write("Student Number".PadRight(20));
             Console.Write("First Name".PadRight(20));
             Console.Write("Last Name".PadRight(20));
-            Console.WriteLine("Interest".PadRight(20));
+            Console.Write("Interest".PadRight(20));
+            Console.WriteLine("Score".PadRight(20));
             for(int i = 0; i < student.Length; i++)
             {
                 Console.Write($"{i + 1}".PadRight(20));
                 Console.Write($"{student[i].firstName}".PadRight(20));
                 Console.Write($"{student[i].lastName}".PadRight(20));
-                Console.WriteLine($"{student[i].interest}".PadRight(20));
+                Console.Write($"{student[i].interest}".PadRight(20));
+                Console.WriteLine($"{student[i].score}".PadRight(20));
             }
             Console.ReadLine();
         }
